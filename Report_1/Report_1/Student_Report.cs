@@ -45,7 +45,7 @@ class Program
             Shelp = Console.ReadLine();
             Bval = false;
             Bval = Boolean.TryParse(Shelp, out Bhelp);
-        } while(!Bval);
+        } while (!Bval);
         //
         do
         {
@@ -71,15 +71,17 @@ class Program
             Bval = false;
             Bval = Decimal.TryParse(Shours, out Dhours);
         } while (!Bval);
-    //
-    //
-        //Console.WriteLine(Scourse);
-        //Console.WriteLine(Ipage);
-        //Console.WriteLine(Scomments);
-        //Console.WriteLine(Sfeed);
-        //Console.WriteLine(Bhelp);
-        //Console.WriteLine(Dhours);
-        //Console.ReadLine(); 
+        //
+        //
+        SubQcolor();
+        Console.WriteLine("Course.......:" + Scourse);
+        Console.WriteLine("Page Number..:" + Spage);
+        Console.WriteLine("Need Help....:" + Shelp);
+        Console.WriteLine("Comments.....:" + Scomments);
+        Console.WriteLine("Feedback.....:" + Sfeed);
+        Console.WriteLine("Study Hours..:" + Shours);
+        Console.WriteLine("Thank you for your answers. An Instructor will respond to this shortly.Have a great day!");
+        Console.ReadLine();
     }
     //
     //
