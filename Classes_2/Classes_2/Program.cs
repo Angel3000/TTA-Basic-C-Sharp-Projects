@@ -11,7 +11,7 @@ namespace Classes_2
         static void Main()
         {
             Coper coper = new Coper();
-            Coper.Doper(9, 70);
+            Coper.Doper(val1: 9, val2: 70);
             //
             Console.ReadLine();
         }
