@@ -15,10 +15,16 @@ namespace TwentyOne
         {
             Console.WriteLine("Wellcome to the casino. Tell me your name:");
             string playerName = Console.ReadLine();
-
-            Console.WriteLine("How much money do you bring?");
-            int bank = Convert.ToInt32(Console.ReadLine());
-
+            //
+            bool validAnwser = false;
+            int bank = 0;
+            while (!validAnwser)
+            { 
+                Console.WriteLine("How much money do you bring?");
+                validAnwser = int.TryParse(Console.ReadLine(), out bank);
+                if (!validAnwser) Console.WriteLine("Please type digits only. No decimals.");
+            }
+            //           
             Console.WriteLine("Hello {0}, Would you like to join blackjack?", playerName);
             string answer = Console.ReadLine().ToLower();
 
@@ -36,7 +42,22 @@ namespace TwentyOne
                 player.isActivelyPlaying = true;
                 while (player.isActivelyPlaying && player.Balance > 0)
                 {
-                    game.Play();
+                    try
+                    { 
+                        game.Play();
+                    }
+                    catch (FraudException)
+                    {
+                        Console.WriteLine("Security! Get him!");
+                        Console.ReadLine();
+                        return;
+                    }
+                    catch (Exception)
+                    {
+                        Console.WriteLine("An error ocurred. Please cotact with your system administrator");
+                        Console.ReadLine();
+                        return;
+                    }
                 }
                 game -= player;
                 Console.WriteLine("Thanks for playing.");
