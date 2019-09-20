@@ -11,12 +11,6 @@ namespace TwentyOne
     {
         static void Main(string[] args)
         {
-            //string text = "Here is a text line";
-            //File.WriteAllText(@"C:\Users\angel.lopez\Desktop\VSP\TTA-Basic-C-Sharp-Projects\TwentyOne\log.txt", text);
-            //
-            //string text = File.ReadAllText(@"C:\Users\angel.lopez\Desktop\VSP\TTA-Basic-C-Sharp-Projects\TwentyOne\log.txt");
-            //Console.WriteLine(text);
-            //
             Console.WriteLine("Wellcome to the casino. Tell me your name:");
             string playerName = Console.ReadLine();
 
