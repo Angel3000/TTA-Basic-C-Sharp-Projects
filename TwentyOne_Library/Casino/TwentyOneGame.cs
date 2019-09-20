@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Casino.Interfaces;
 
-namespace TwentyOne
+namespace Casino.TwentyOne
 {
-    public class TwentyOneGame : Game 
+    public class TwentyOneGame : Game, IWalkAway
     {
         public TwentyOneDealer Dealer { get; set; }
 
